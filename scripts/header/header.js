@@ -34,3 +34,6 @@ function mostrarBuscador() {
         opcion = 0;
     }
 }
+
+window.addEventListener("resize", adaptar);
+
