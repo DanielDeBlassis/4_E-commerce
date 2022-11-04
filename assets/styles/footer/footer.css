@@ -142,3 +142,96 @@ section.contacto {
 }
 
 
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*                      AJUSTE A PANTALLA - MEDIA QUERYS                           */
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 2560px) {}
+
+@media screen and (max-width: 1024px) {
+    .contacto__container {
+        gap: 40px;
+    }
+
+    .contacto__mensaje {
+        width: 350px;
+    }
+
+    .nombre,
+    .mensaje {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 768px) {
+
+    .contacto__container {
+        justify-content: space-between;
+        width: 700px;
+    }
+
+    .contacto__mensaje {
+        width: 400px;
+    }
+
+    .nombre,
+    .mensaje {
+        width: 400px;
+    }
+
+    .contacto__logo___links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .contacto__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .contacto__mensaje__title {
+        text-align: initial;
+        width: auto;
+    }
+    .contacto__mensaje {
+        width: 100%;
+    }
+    .nombre,
+    .mensaje {
+        width: 310px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .nombre,
+    .mensaje {
+        width: 310px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .nombre,
+    .mensaje {
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .nombre,
+    .mensaje {
+        width: 250px;
+    }
+}
