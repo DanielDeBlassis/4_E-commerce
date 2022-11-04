@@ -57,3 +57,5 @@ function adaptar(){
     }
 }
 
+window.addEventListener("resize", adaptar);
+
