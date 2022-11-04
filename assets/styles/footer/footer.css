@@ -1,0 +1,144 @@
+section.contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 32px;
+    gap: 115px;
+    width: 100vw;
+    background: #EAF2FD;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.contacto__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 112px;
+    width: 75%;
+    flex: 0 0 auto;
+    order: 0;
+}
+
+.logo__alura-geek {
+    width: 176px;
+    height: 50px;
+}
+
+.contacto__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 176px;
+    height: 234px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.contacto__mensaje {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 525px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.contacto__mensaje__title {
+    /* width: 560px; */
+    /* height: 19px; */
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+.nombre,
+.mensaje {
+    width: 525px;
+}
+
+.contacto__links__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contacto__links__lista--item {
+
+    width: 176px;
+    height: 19px;
+}
+
+.rodapie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 10px;
+
+    width: 100vw;
+
+
+    background: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.rodapie>p {
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    margin: 0;
+
+    color: #464646;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.contacto__links__lista--item>a {
+    text-decoration: none;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+}
+
+.contacto__links__lista--item>a:hover {
+    border-bottom: solid 2px #464646;
+}
+
+
