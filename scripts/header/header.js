@@ -20,3 +20,17 @@ function adaptar() {
         $formularioBusqueda.innerHTML = bloqueMayor;
     }
 }
+let opcion = 0;
+
+function mostrarBuscador() {
+
+    const $buscador = document.querySelector(".container__form");
+
+    if (opcion === 0) {
+        $buscador.style.display = "flex";
+        opcion = 1;
+    } else if (opcion === 1) {
+        $buscador.style.display = "none";
+        opcion = 0;
+    }
+}
