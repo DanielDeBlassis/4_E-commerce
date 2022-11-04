@@ -1,14 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700&display=swap');
 
 .promos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
     width: 100vw;
     height: 350px;
     background-image: url("/assets/images/promociones/hero.svg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
-.promos__descripcion {
+.promos_descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 6px;
     color: white;
+
+    width: 75%;
+    height: 170px;
+}
+
+.promos_descripcion__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 61px;
+}
+
+.promos_descripcion__details {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.ver-consolas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+
+    width: 129px;
+    height: 51px;
 }
