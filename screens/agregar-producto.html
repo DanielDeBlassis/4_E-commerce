@@ -39,27 +39,47 @@
         </div>
     </header>
 
+
     <main>
-        <section>
-            <h1>Agregar Nuevo Producto</h1>
-            <form>
-                <label for="url-img">URL de la imagen
-                    <input type="url" name="url-img" placeholder="URL" required>
-                </label>
-                <label for="categoria">Categoría
-                    <input type="text" name="categoria" placeholder="Categoría">
-                </label>
-                <label for="nombre-producto">Nombre del Producto
-                    <input type="text" name="nombre-producto" placeholder="Nombre del Producto" required>
-                </label>
-                <label for="precio">Precio del Producto
-                    <input type="text" name="precio" placeholder="$ 60,00">
-                </label>
-                <label for="descripcion">Descripción del Producto
-                    <textarea name="descripcion" id="" cols="30" rows="10" placeholder="Descripción"></textarea>
-                </label>
-                <button class="btn btn-primary" type="submit" title="Ingresar">Agregar Producto</button>
-            </form>
+        <section class="agregar">
+            <div class="container-formulario">
+                <h1>Agregar Nuevo Producto</h1>
+                <form class="formulario">
+                    <div class="campo">
+                        <span>URL de la imagen</span>
+                        <label for="url-img"><input class="" type="url" name="url-img" placeholder="URL"
+                                title="URL de la imagen" required="">
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Categoría</span>
+                        <label for="categoria" title="Categoría">
+                            <input class="" type="text" name="categoria" placeholder="Categoría">
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Nombre del Producto</span>
+                        <label for="nombre-producto" title="Nombre del Producto">
+                            <input class="" type="text" name="nombre-producto" placeholder="Nombre del Producto"
+                                required>
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Precio del Producto</span>
+                        <label for="precio" title="Precio del Producto">
+                            <input class="" type="text" name="precio" placeholder="$ 60,00">
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Descripción del Producto</span>
+                        <label for="descripcion" title="Descripción del Producto">
+                            <textarea class="" name="descripcion" id="" cols="30" rows="10"
+                                placeholder="Descripción"></textarea>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary btn-agregar" type="submit" title="Ingresar">Agregar Producto</button>
+                </form>
+            </div>
         </section>
     </main>
 
