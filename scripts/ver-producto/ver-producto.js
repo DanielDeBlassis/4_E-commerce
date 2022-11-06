@@ -19,3 +19,7 @@ const imagenesProductos = [
     "assets/images/productos/diversos/virtual-reality.svg",
     "assets/images/productos/diversos/pikachu.svg"
 ];
+
+
+let urlImagen = localStorage.getItem("imagenSeleccionada");
+
