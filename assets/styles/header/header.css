@@ -130,8 +130,8 @@ textarea {
     }
 
     .logo-alura {
-        width: 80px;
-        height: 25px;
+        width: 100px;
+        height: 30px;
     }
 }
 
@@ -146,9 +146,8 @@ textarea {
         height: 30px;
     }
 
-    .logo-alura {
-        width: 60px;
-        height: 20px;
+    .container__buscador {
+        order: 3;
     }
 }
 
