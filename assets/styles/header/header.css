@@ -164,8 +164,8 @@ textarea {
         height: auto;
     }
 
-    .container__buscador {
-        order: 3;
+    summary {
+        list-style: none;
     }
 
 }
