@@ -7,10 +7,6 @@ section.contacto {
     gap: 115px;
     width: 100vw;
     background: #EAF2FD;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 .contacto__container {
@@ -20,8 +16,6 @@ section.contacto {
     padding: 0px;
     gap: 112px;
     width: 75%;
-    flex: 0 0 auto;
-    order: 0;
 }
 
 .logo__alura-geek {
@@ -38,29 +32,16 @@ section.contacto {
 
     width: 176px;
     height: 234px;
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
 
 .contacto__mensaje {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
     gap: 8px;
-
-    width: 525px;
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
+    width: 100%;
 }
 
 .contacto__mensaje__title {
-    /* width: 560px; */
-    /* height: 19px; */
 
     font-family: 'Raleway';
     font-style: normal;
@@ -68,11 +49,6 @@ section.contacto {
     font-size: 16px;
     line-height: 19px;
     color: #464646;
-}
-
-.nombre,
-.mensaje {
-    width: 525px;
 }
 
 .contacto__links__lista {
@@ -97,16 +73,8 @@ section.contacto {
     align-items: center;
     padding: 32px;
     gap: 10px;
-
     width: 100vw;
-
-
     background: #FFFFFF;
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 .rodapie>p {
@@ -120,10 +88,6 @@ section.contacto {
     margin: 0;
 
     color: #464646;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
 .contacto__links__lista--item>a {
@@ -141,6 +105,9 @@ section.contacto {
     border-bottom: solid 2px #464646;
 }
 
+.contenedor-btn-enviar {
+    display: flex;
+}
 
 
 /* ------------------------------------------------------------------------------- */
@@ -155,15 +122,6 @@ section.contacto {
     .contacto__container {
         gap: 40px;
     }
-
-    .contacto__mensaje {
-        width: 350px;
-    }
-
-    .nombre,
-    .mensaje {
-        width: 300px;
-    }
 }
 
 @media screen and (max-width: 900px) {}
@@ -173,15 +131,6 @@ section.contacto {
     .contacto__container {
         justify-content: space-between;
         width: 700px;
-    }
-
-    .contacto__mensaje {
-        width: 400px;
-    }
-
-    .nombre,
-    .mensaje {
-        width: 400px;
     }
 
     .contacto__logo___links {
@@ -204,34 +153,15 @@ section.contacto {
         text-align: initial;
         width: auto;
     }
-    .contacto__mensaje {
-        width: 100%;
-    }
-    .nombre,
-    .mensaje {
-        width: 310px;
-    }
 
 }
 
 @media screen and (max-width: 375px) {
-    .nombre,
-    .mensaje {
-        width: 310px;
-    }
 }
 
 @media screen and (max-width: 360px) {
-    .nombre,
-    .mensaje {
-        width: 300px;
-    }
 
 }
 
 @media screen and (max-width: 320px) {
-    .nombre,
-    .mensaje {
-        width: 250px;
-    }
 }
