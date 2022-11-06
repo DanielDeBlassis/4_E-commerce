@@ -38,15 +38,15 @@
     </header>
 
     <main>
-        <section>
-            <h1>Inicio de Sesión</h1>
-            <form>
-                <label for="email">Correo Electrónico
-                    <input type="email" name="email" required></label>
-                <label for="password">Contraseña
-                    <input type="password" name="password" required>
+        <section class="login">
+            <h1>Iniciar Sesión</h1>
+            <form class="formulario">
+                <label for="email" title="Correo Electrónico">
+                    <input class="form-control" type="email" name="email" placeholder="E-mail" required></label>
+                <label for="password" title="Contraseña">
+                    <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
                 </label>
-                <button class="btn btn-primary" type="submit" title="Ingresar">Ingresar</button>
+                <button class="btn btn-primary btn-ingresar" onclick="ingresar(event)" type="submit" title="Ingresar">Ingresar</button>
             </form>
         </section>
     </main>
