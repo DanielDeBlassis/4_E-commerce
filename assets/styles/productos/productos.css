@@ -11,14 +11,6 @@
     background: #F5F5F5;
 }
 
-.categoria_producto {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-    width: 75%;
-}
 
 .categoria_producto__item {
     display: flex;
@@ -172,10 +164,6 @@
 
     .container__productos {
         align-items: flex-start;
-    }
-
-    .categoria_producto {
-        width: 100%;
     }
 
     .categoria_producto__item {
