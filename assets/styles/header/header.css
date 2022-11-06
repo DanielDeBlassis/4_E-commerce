@@ -121,8 +121,10 @@ textarea {
     }
 
     .btn-login {
-        width: 100px;
-        height: 38px;
+        width: 150px;
+        font-size: 14px;
+        padding: 5px;
+        height: auto;
     }
 
     .busqueda {
@@ -137,8 +139,10 @@ textarea {
 
 @media screen and (max-width: 500px) {
     .btn-login {
-        width: 60px;
-        height: 30px;
+        width: 130px;
+        font-size: 12px;
+        padding: 5px;
+        height: auto;
     }
 
     .busqueda {
@@ -153,8 +157,11 @@ textarea {
 
 @media screen and (max-width: 360px) {
 
-    summary {
-        list-style: none;
+    .btn-login {
+        width: 135px;
+        font-size: 11px;
+        padding: 5px;
+        height: auto;
     }
 
     .container__buscador {
