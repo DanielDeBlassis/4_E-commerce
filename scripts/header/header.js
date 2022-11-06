@@ -3,7 +3,7 @@ const bloqueMenor = `<i onclick="mostrarBuscador()" class="fas fa-search"></i>
         <label>
           <input class="form-control busqueda" type="search" placeholder="Buscar" />
         </label>
-        <button class="btn btn-secondary" type="submit" title="Buscar"><i class="fas fa-search"></i></button>
+        <button class="btn btn-secondary btn-search" type="submit" title="Buscar"><i class="fas fa-search"></i></button>
     </div>`;
 
 const bloqueMayor = `<label>
@@ -14,11 +14,12 @@ const bloqueMayor = `<label>
 
 function adaptar() {
     const $formularioBusqueda = document.querySelector(".formulario-busqueda");
-    if (screen.width <= 360) {
+    if (screen.width <= 450) {
         $formularioBusqueda.innerHTML = bloqueMenor;
-    } else if (screen.width > 360) {
+    } else if (screen.width > 450) {
         $formularioBusqueda.innerHTML = bloqueMayor;
     }
+    adaptarBoton();
 }
 let opcion = 0;
 
