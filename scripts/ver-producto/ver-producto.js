@@ -74,3 +74,8 @@ function cargarProductoSimilares() {
     $contenedorSimilares.innerHTML = contenido;
 
 }
+
+window.addEventListener("load", () => {
+    mostrarProducto();
+    cargarProductoSimilares();
+})
