@@ -36,7 +36,6 @@ function mostrarBuscador() {
     }
 }
 
-window.addEventListener("resize", adaptar);
 function adaptarBoton() {
     let ruta = window.location.pathname;
     if(ruta.indexOf("index") === -1){
@@ -51,3 +50,5 @@ function adaptarBoton() {
     }
 }
 
+window.addEventListener("resize", adaptar);
+window.addEventListener("load", adaptar)
