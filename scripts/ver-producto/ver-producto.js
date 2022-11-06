@@ -23,3 +23,8 @@ const imagenesProductos = [
 
 let urlImagen = localStorage.getItem("imagenSeleccionada");
 
+function guardarProducto(id) {
+    localStorage.setItem("imagenSeleccionada", `${imagenesProductos[id - 1]}`);
+}
+
+
