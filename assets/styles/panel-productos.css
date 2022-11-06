@@ -1,0 +1,40 @@
+
+.todos__productos__titulo{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.categoria_producto__box {
+    margin: 20px 0;
+}
+
+.container__imagen {
+    position: relative;   
+}
+
+.container__btn-edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    gap: 30px;
+    display: flex;
+    margin: 10px;
+    font-size: 24px;
+    color: white;
+    background: #0000000d;
+    border-radius: 5px;
+}
+
+.fa-pen:hover {
+    cursor: pointer;
+    color: #2A7AE4;
+}
+.fa-trash:hover {
+    cursor: pointer;
+    color: red;
+}
