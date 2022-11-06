@@ -38,3 +38,29 @@
     cursor: pointer;
     color: red;
 }
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*                      AJUSTE A PANTALLA - MEDIA QUERYS                           */
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+    .categoria_producto__box div:nth-child(5) {
+        display: grid;
+    }
+
+    .categoria_producto__box div:nth-child(6) {
+        display: grid;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .todos__productos__titulo{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
