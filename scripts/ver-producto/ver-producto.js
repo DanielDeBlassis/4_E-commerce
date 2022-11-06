@@ -28,3 +28,11 @@ function guardarProducto(id) {
 }
 
 
+function mostrarProducto() {
+    const $imagenProducto = document.querySelector(".producto__seleccionado__imagen");
+
+    if (urlImagen != null) {
+        $imagenProducto.style.backgroundImage = `url("../${urlImagen}")`;
+    }
+
+}
