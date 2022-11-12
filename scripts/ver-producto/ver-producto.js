@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     let descuento = Math.round(producto.precio * 0.33);
 
     const $imagenProducto = document.querySelector(".producto__seleccionado__imagen");
-    $imagenProducto.style.backgroundImage = `url(${producto.urlImagen})`;
+    $imagenProducto.innerHTML = `<img src="${producto.urlImagen}" alt="${producto.nombre}"/>`;
 
     const $descripcion = document.querySelector(".producto__seleccionado__descripcion");
 
