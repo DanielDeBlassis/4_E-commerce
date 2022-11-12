@@ -35,5 +35,37 @@ window.addEventListener("DOMContentLoaded", async () => {
         });
 
         const $botonesBorrar = document.querySelectorAll(".btn-borrar");
+        $botonesBorrar.forEach(boton => {
+            boton.addEventListener("click", async (event) => {
+
+                swal({
+                    title: "¿Estás seguro de borrar este producto?",
+                    text: "(Una vez borrado, el producto no podrá ser recuperado)",
+                    icon: "warning",
+                    buttons: ["Cancelar", "Aceptar"],
+                    dangerMode: true,
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            try {
+                                deleteProducto(event.target.dataset.id);
+                                swal("El producto ha sido borrado con éxito!", {
+                                    icon: "success",
+                                });
+                            } catch (error) {
+                                swal("Error!", "Ocurrió un error! Vuelve a intentar.", {
+                                    icon: "error",
+                                });
+                                console.log("Error al borrar un producto: " + error);
+                            }
+
+                        } else {
+                            swal("El producto está a salvo");
+                        }
+                    });
+            })
+        })
+    });
+
 });
 
