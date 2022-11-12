@@ -23,11 +23,12 @@
     right: 0;
     gap: 30px;
     display: flex;
-    margin: 10px;
-    font-size: 24px;
+    margin: 5px;
+    font-size: 20px;
     color: white;
-    background: #0000000d;
+    background: #00000091;
     border-radius: 5px;
+    padding: 5px;
 }
 
 .fa-pen:hover {
