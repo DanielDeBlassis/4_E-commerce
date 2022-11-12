@@ -32,7 +32,6 @@ section.producto__seleccionado {
 .producto__seleccionado__descripcion {
     display: flex;
     width: 50%;
-    text-align: justify;
     flex-direction: column;
     justify-content: center;
 }
