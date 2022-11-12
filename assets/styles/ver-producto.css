@@ -62,6 +62,16 @@ section.producto__seleccionado {
     background: white;
 }
 
+/* ESTILOS PRECIOS */
+span.precio-normal {
+    color: red;
+    text-decoration-line: line-through;
+}
+
+sup.descuento {
+    color: green;
+}
+
 /* ------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------- */
 /*                      AJUSTE A PANTALLA - MEDIA QUERYS                           */
