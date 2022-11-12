@@ -1,3 +1,4 @@
+import { getProducto, getProductos } from "../../services/client-service.js"
 
 
 
