@@ -39,6 +39,69 @@
     </header>
 
 
+    <main>
+        <section class="agregar">
+            <div class="container-formulario">
+                <h1>Editar Producto</h1>
+                <form class="formulario">
+                    <div class="campo">
+                        <span>Imagen Actual</span>
+                        <div class="text-center contenedor-imagen"></div>
+                    </div>
+                    <div class="campo">
+                        <span>URL de la imagen</span>
+                        <label for="url-img"><input class="" type="url" name="url-img" placeholder="URL"
+                                title="URL de la imagen" required="">
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Categoría</span>
+                        <label for="categoria" title="Categoría">
+                            <input class="" type="text" name="categoria" placeholder="Categoría">
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Nombre del Producto</span>
+                        <label for="nombre-producto" title="Nombre del Producto">
+                            <input class="" type="text" name="nombre-producto" placeholder="Nombre del Producto"
+                                required>
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Precio del Producto</span>
+                        <label for="precio" title="Precio del Producto">
+                            <input class="" type="text" name="precio" placeholder="$ 60,00">
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Stock del Producto</span>
+                        <label for="stock" title="Stock del Producto">
+                            <input class="" type="text" name="stock" placeholder="100">
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>¿El producto está en promoción?</span>
+                        <label for="promocion" title="¿El producto está en promoción?">
+                            <select name="promocion" id="">
+                                <option value="0" selected>No</option>
+                                <option value="1">Sí</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="campo">
+                        <span>Descripción del Producto</span>
+                        <label for="descripcion" title="Descripción del Producto">
+                            <textarea class="" name="descripcion" id="" cols="30" rows="10"
+                                placeholder="Descripción"></textarea>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary btn-editar" type="submit" title="Editar">Editar Producto</button>
+                    <button class="btn btn-secondary btn-cancelar"
+                        onclick="window.location.href = '/screens/productos.html'" type="button">Finalizar</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <section class="contacto">
