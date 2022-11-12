@@ -66,4 +66,5 @@ function adaptar() {
 
 
 window.addEventListener("resize", adaptar);
+window.addEventListener("DOMContentLoaded", adaptar);
 
