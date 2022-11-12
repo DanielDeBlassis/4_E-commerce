@@ -28,5 +28,11 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         const $botonesEditar = document.querySelectorAll(".btn-editar");
 
+        $botonesEditar.forEach(boton => {
+            boton.addEventListener("click", async (event) => {
+                window.location.href = `/screens/editar-producto.html?id=${event.target.dataset.id}`;
+            });
+        });
+
 });
 
