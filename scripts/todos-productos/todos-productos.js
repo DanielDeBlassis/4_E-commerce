@@ -25,5 +25,8 @@ window.addEventListener("DOMContentLoaded", async () => {
                             </div>`;
             $contenedor.appendChild(contenido);
         });
+
+        const $botonesEditar = document.querySelectorAll(".btn-editar");
+
 });
 
