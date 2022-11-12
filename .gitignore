@@ -1,2 +1,7 @@
 
 Challenge \#4 - Notas.txt
+.firebaserc
+.vscode/settings.json
+database.rules.json
+firebase.json
+productos.json
