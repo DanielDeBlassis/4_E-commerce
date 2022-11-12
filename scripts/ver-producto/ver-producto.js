@@ -3,6 +3,7 @@ import { getProducto, getProductos } from "../../services/client-service.js"
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
 
+let filtroCategoria = [];
 
 let urlImagen = localStorage.getItem("imagenSeleccionada");
 
