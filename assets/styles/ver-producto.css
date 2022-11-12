@@ -27,7 +27,6 @@ section.producto__seleccionado {
     height: 404px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../images/productos/star-wars/stormtrooper.svg");
 }
 
 .producto__seleccionado__descripcion {
