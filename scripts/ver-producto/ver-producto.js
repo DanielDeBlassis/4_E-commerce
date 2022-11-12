@@ -5,61 +5,56 @@ const id = url.searchParams.get("id");
 
 let filtroCategoria = [];
 
-let urlImagen = localStorage.getItem("imagenSeleccionada");
+window.addEventListener("DOMContentLoaded", async () => {
 
-function guardarProducto(id) {
-    localStorage.setItem("imagenSeleccionada", `${imagenesProductos[id - 1]}`);
-}
+    const doc = await getProducto(id);
+    const producto = doc.data();
+    let descuento = Math.round(producto.precio * 0.33);
 
-
-function mostrarProducto() {
     const $imagenProducto = document.querySelector(".producto__seleccionado__imagen");
+    $imagenProducto.style.backgroundImage = `url(${producto.urlImagen})`;
 
-    if (urlImagen != null) {
-        $imagenProducto.style.backgroundImage = `url("../${urlImagen}")`;
-    }
+    const $descripcion = document.querySelector(".producto__seleccionado__descripcion");
 
-}
+    $descripcion.innerHTML = `<span>${producto.categoria}</span>
+    <h1>${producto.nombre}</h1>                                
+    ${producto.enPromocion ?
+            `<span class="precio-normal">$ ${producto.precio}</span>
+<span class="precio-descuento">$ ${(producto.precio - descuento).toFixed(2)} <sup class="descuento">-33%</sup></span>`
+            : `<span>$ ${producto.precio}</span>`}
+    <p>${producto.descripcion}</p>
+    </div>`;
 
-function cargarProductoSimilares() {
-    const $contenedorSimilares = document.querySelector(".productos__similares");
-    let contenido = `<div class="categoria_producto__titulo">
-                    <h2>Productos Similares</h2>
-                    </div>
-                    <div class="categoria_producto__box">`;
+    const todosLosProductos = await getProductos();
+    todosLosProductos.forEach(element => {
+        const elemento = element.data();
 
-    let numerosSalidos = [];
+        if (elemento.categoria === producto.categoria && element.id != id) {
+            let amalgama = { "id": element.id, elemento };
+            filtroCategoria.push(amalgama);
+        }
+    });
 
-    if (urlImagen != null) {
-        numerosSalidos.push(imagenesProductos.indexOf(`${urlImagen}`));
-    }else {
-        numerosSalidos.push(imagenesProductos.indexOf(`assets/images/productos/star-wars/stormtrooper.svg`));
-    }
-
+    const $contenedorSimilares = document.querySelector(".categoria_producto__box");
     let contador = 0;
 
-    while (contador < 6) {
-
-        let nroAzar = Math.round(Math.random() * 17);
-
-        if (numerosSalidos.indexOf(nroAzar) === -1) {
-            contenido += `<div class="categoria_producto__item">
-            <img class="imagen__producto" src="../${imagenesProductos[nroAzar]}" alt="Imagen Producto" />
-            <h5>Producto XYZ</h5>
-            <p>$ 60.00</p>
-            <a  href="../screens/ver-producto.html" onclick="guardarProducto(${nroAzar + 1})">Ver producto</a>
+    filtroCategoria.forEach(productoSimilar => {
+        if (contador < 6) {
+            let contenedor = document.createElement("div");
+            contenedor.classList.add("categoria_producto__item");
+            contenedor.innerHTML = `<div><img class="imagen__producto" src="${productoSimilar.elemento.urlImagen}" alt="${producto.nombre}"/></div>
+            <div class="descripcion__producto">
+            <h5 class="descripcion__producto__titulo">${productoSimilar.elemento.nombre}</h5>
+            ${productoSimilar.elemento.enPromocion ?
+                    `<span class="descripcion__producto__precio precio-normal">$ ${productoSimilar.elemento.precio}</span>
+            <span class="descripcion__producto__precio precio-descuento" class="precio-descuento">$ ${(productoSimilar.elemento.precio - descuento).toFixed(2)} <sup class="descuento">-33%</sup></span>`
+                    : `<span class="descripcion__producto__precio">$ ${productoSimilar.elemento.precio}</span>`}
+            <a class="descripcion__producto__enlace" href="../screens/ver-producto.html?id=${productoSimilar.id}">Ver producto</a>
             </div>`;
-            numerosSalidos.push(nroAzar);
+            $contenedorSimilares.appendChild(contenedor);
             contador++;
         }
-    }
+    })
 
-    contenido += `</div>`;
-    $contenedorSimilares.innerHTML = contenido;
 
-}
-
-window.addEventListener("load", () => {
-    mostrarProducto();
-    cargarProductoSimilares();
 })
