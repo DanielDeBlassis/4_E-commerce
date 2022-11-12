@@ -34,5 +34,6 @@ window.addEventListener("DOMContentLoaded", async () => {
             });
         });
 
+        const $botonesBorrar = document.querySelectorAll(".btn-borrar");
 });
 
