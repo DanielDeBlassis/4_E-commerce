@@ -32,3 +32,24 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 })
 
+$formularioEditar.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    $urlImagen = document.querySelector("input[name='url-img']").value;
+    $categoria = document.querySelector("input[name='categoria']").value;
+    $nombre = document.querySelector("input[name='nombre-producto']").value;
+    $precio = document.querySelector("input[name='precio']").value;
+    $stock = document.querySelector("input[name='stock']").value;
+    $enPromocion = document.querySelector("select[name='promocion']").value;
+    $descripcion = document.querySelector("textarea[name='descripcion']").value;
+
+    try {
+        updateProducto(id, { categoria: $categoria, nombre: $nombre, descripcion: $descripcion, precio: parseFloat($precio), stock: parseInt($stock), enPromocion: Boolean(parseInt($enPromocion)), urlImagen: $urlImagen });
+        swal("Correcto!", "Producto editado exitosamente", "success");
+
+    } catch (error) {
+        swal("Error!", "Ocurrió un error, vuelve a intentarlo", "error");
+        console.log("Error al agregar el producto: " + error);
+    }
+
+});
