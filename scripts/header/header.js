@@ -34,7 +34,7 @@ function mostrarBuscador() {
 
 function adaptarBoton() {
     let ruta = window.location.pathname;
-    if (ruta.indexOf("index") === -1 && ruta.indexOf(
+    if (ruta.indexOf("index") === -1 || ruta.indexOf(
         "/4_E-commerce/") === -1) {
         const $botonLogin = document.querySelector(".btn-login");
 
