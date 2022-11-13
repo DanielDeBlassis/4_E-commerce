@@ -34,13 +34,14 @@ function mostrarBuscador() {
 
 function adaptarBoton() {
     let ruta = window.location.pathname;
-    if(ruta.indexOf("index") === -1){
+    if (ruta.indexOf("index") === -1 && ruta.indexOf(
+        "/4_E-commerce/") === -1) {
         const $botonLogin = document.querySelector(".btn-login");
 
-        if(ruta.indexOf("agregar-producto") != -1){
+        if (ruta.indexOf("agregar-producto") != -1) {
             $botonLogin.innerText = "Menú Administrador";
             $botonLogin.href = "../screens/productos.html";
-        }else{
+        } else {
             $botonLogin.style.display = "none";
         }
     }
