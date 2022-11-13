@@ -7,6 +7,15 @@
     background-color: #FFFFFF;
 }
 
+.encabezado__container{
+    display: flex;
+    padding: 0 32px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    width: 75%;
+}
+
 .logo-alura {
     width: 176px;
     height: 50px;
@@ -54,7 +63,49 @@ textarea {
     height: 120px;
 }
 
+/* NUEVO FORMULARIO */
+form.formulario-busqueda {
+    display: flex;
+    background: #ccc;
+    padding: 5px;
+    border-radius: 20px;
+}
+.busqueda {
+    display: flex;
+    width: 365px;
+    background: #ccc;
+    outline: none;
+    border: none;
+    margin-left: 15px;
+}
+.busqueda:focus {
+    background: #ccc;
+    outline: none;
+    border: none;
+}
+.btn-buscar {
+    background: transparent;
+    border: none;
+}
+.btn-buscar>i{
+    color: gray;
+    transition: 2s;
+}
+.btn-buscar:hover {
+    background-color: transparent;
+    color: white;
+}
+.btn-buscar>i:hover {
+    transform: scale(1.25);
+}
 
+/* OCULTAR Y MOSTRAR */
+.oculto {
+    display: none;
+}
+.mostrar {
+    display: flex;
+}
 
 /* ------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------- */
@@ -116,6 +167,10 @@ textarea {
 
 @media screen and (max-width: 768px) {
 
+    .encabezado__container {
+        width: 100%;
+    }
+
     .encabezado {
         height: 72px;
     }
@@ -146,12 +201,20 @@ textarea {
     }
 
     .busqueda {
-        width: 110px;
-        height: 30px;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
 
     .container__buscador {
         order: 3;
+    }
+
+    .btn-buscar {
+        display: flex;
+        align-items: center;
     }
 }
 
