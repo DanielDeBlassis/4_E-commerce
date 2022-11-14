@@ -55,3 +55,17 @@ function mostrarCoincidencias() {
 
 }
 
+document.addEventListener("click", function(e) {
+    let $contenedorBuscador = document.querySelector(".container__buscador");
+    const clases = e.target.classList;
+    const nombreClases = `${clases.toString()}`;
+
+    if(nombreClases.indexOf("sugerencia") === -1 && nombreClases.indexOf("busqueda") === -1){
+        ocultarSugerencias();
+        $sugerencias.innerHTML = `<li class="sugerencias__item"><span>Escriba algo...</span></li>`;
+        $inputBusqueda.value = "";
+    }else{
+        mostrarSugerencias();
+    }
+});
+
