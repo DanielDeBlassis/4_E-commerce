@@ -69,3 +69,4 @@ document.addEventListener("click", function(e) {
     }
 });
 
+$inputBusqueda.addEventListener("keyup", mostrarCoincidencias);
