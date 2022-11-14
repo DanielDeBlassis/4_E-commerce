@@ -1,0 +1,100 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+section.usuarios {
+    width: 70%;
+}
+
+.container__tabla {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+
+.todos__usuarios__titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.btn-edicion-usuario {
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+}
+
+.btn-editar {
+    color: #2ca663;
+    font-size: 22px;
+}
+
+.btn-editar:hover {
+    color: green;
+}
+
+.btn-borrar {
+    color: red;
+    font-size: 20px;
+}
+
+.btn-borrar:hover {
+    color: #dd0606;
+    font-size: 20px;
+}
+
+.btn-agregar {
+    font-size: 2.5rem;
+    color: seagreen;
+    transition: 2s;
+}
+
+.btn-agregar:hover {
+    transform: scale(1.20);
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*                      AJUSTE A PANTALLA - MEDIA QUERYS                           */
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+    .btn-agregar {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .btn-agregar {
+        font-size: 1.5rem;
+    }
+    main {
+        padding: 50px 10px;
+    }
+
+    section.usuarios {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .btn-edicion-usuario {
+        gap: 16px;
+    }
+
+    .btn-borrar {
+        font-size: 14px;
+    }
+
+    .btn-editar {
+        font-size: 14px;
+    }
+
+}
