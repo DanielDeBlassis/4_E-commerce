@@ -14,3 +14,11 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     $sugerencias.style.display = "none";
 });
+
+function ocultarSugerencias() {
+    $sugerencias.style.display = "none";
+}
+
+function mostrarSugerencias() {
+    $sugerencias.style.display = "flex";
+}
