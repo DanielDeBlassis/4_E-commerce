@@ -22,3 +22,10 @@ function ocultarSugerencias() {
 function mostrarSugerencias() {
     $sugerencias.style.display = "flex";
 }
+
+function encontrarCoincidencias(palabraClave, productos) {
+    return productos.filter(product => {
+        const regex = new RegExp(palabraClave, "gi");
+        return product.producto.nombre.match(regex) || product.producto.categoria.match(regex);
+    })
+}
