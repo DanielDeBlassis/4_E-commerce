@@ -70,3 +70,4 @@ document.addEventListener("click", function(e) {
 });
 
 $inputBusqueda.addEventListener("keyup", mostrarCoincidencias);
+$inputBusqueda.addEventListener("focus", mostrarSugerencias);
