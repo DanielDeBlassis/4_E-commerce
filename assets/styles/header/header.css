@@ -5,9 +5,10 @@
     align-items: center;
     justify-content: space-around;
     background-color: #FFFFFF;
+    position: relative;
 }
 
-.encabezado__container{
+.encabezado__container {
     display: flex;
     padding: 0 32px;
     justify-content: space-between;
@@ -29,7 +30,11 @@
 .container__buscador {
     display: flex;
     align-items: center;
-    gap: 32px;
+    /* gap: 32px; */
+}
+
+.btn-lupa-search {
+    display: none;
 }
 
 .btn-login {
@@ -70,6 +75,7 @@ form.formulario-busqueda {
     padding: 5px;
     border-radius: 20px;
 }
+
 .busqueda {
     display: flex;
     width: 365px;
@@ -78,23 +84,32 @@ form.formulario-busqueda {
     border: none;
     margin-left: 15px;
 }
+
 .busqueda:focus {
     background: #ccc;
     outline: none;
     border: none;
 }
+
 .btn-buscar {
     background: transparent;
     border: none;
 }
-.btn-buscar>i{
+.btn-buscar:disabled {
+    background: transparent;
+    border: none;
+}
+
+.btn-buscar>i {
     color: gray;
     transition: 2s;
 }
+
 .btn-buscar:hover {
     background-color: transparent;
     color: white;
 }
+
 .btn-buscar>i:hover {
     transform: scale(1.25);
 }
@@ -103,6 +118,7 @@ form.formulario-busqueda {
 .oculto {
     display: none;
 }
+
 .mostrar {
     display: flex;
 }
@@ -193,6 +209,10 @@ form.formulario-busqueda {
 }
 
 @media screen and (max-width: 500px) {
+    .btn-lupa-search {
+        order: 3;
+        display: flex;
+    }
     .btn-login {
         width: 130px;
         font-size: 12px;
@@ -201,15 +221,37 @@ form.formulario-busqueda {
     }
 
     .busqueda {
-        width: 140px;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: 100%;
+        padding: 6px 0 6px 12px;
     }
 
     .container__buscador {
         order: 3;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: white;
+        top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .container-formulario-busqueda {
+        width: 100%;
+    }
+
+    form.formulario-busqueda {
+        justify-content: unset;
+        border-radius: 20px;
+        gap: 20px;
+        align-items: center;
     }
 
     .btn-buscar {
@@ -230,5 +272,14 @@ form.formulario-busqueda {
     summary {
         list-style: none;
     }
+
+    .container__buscador {
+        gap: 0;
+    }
+
+    .sugerencias {
+        width: 290px;
+    }
+
 
 }
