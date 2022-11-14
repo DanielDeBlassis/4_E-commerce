@@ -29,3 +29,29 @@ function encontrarCoincidencias(palabraClave, productos) {
         return product.producto.nombre.match(regex) || product.producto.categoria.match(regex);
     })
 }
+function mostrarCoincidencias() {
+    const listaCoincidencias = encontrarCoincidencias(this.value, todosLosProductos);
+    if (this.value.length > 0) {
+        const html = listaCoincidencias.map(product => {
+            const regex = new RegExp(this.value, "gi");
+            const nombreProducto = product.producto.nombre.replace(regex, `<span class="sugerencia__item__coincidencia resaltar">${this.value}</span>`);
+            const categoriaProducto = product.producto.categoria.replace(regex, `<span class="sugerencia__item__coincidencia resaltar">${this.value}</span>`);
+            return `
+        <li class="sugerencias__item">
+            <a href="../screens/ver-producto.html?id=${product.id}"><span class="sugerencia__item__nombre">${nombreProducto}, ${categoriaProducto}</span></a>
+            <div><img class="sugerencias__item__imagen img-search" src="${product.producto.urlImagen}"/></div>
+        </li>
+        `;
+        }).join('');
+
+        if (html.length > 0) {
+            $sugerencias.innerHTML = html;
+        } else {
+            $sugerencias.innerHTML = `<li class="sugerencias__item"><span>No hay coincidencias...</span></li>`;
+        }
+    } else {
+        $sugerencias.innerHTML = `<li class="sugerencias__item"><span>Escriba algo...</span></li>`;
+    }
+
+}
+
