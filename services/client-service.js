@@ -34,10 +34,6 @@ export const saveProducto = (categoria, nombre, descripcion, precio, stock, enPr
   addDoc(collection(db, "productos"), { categoria, nombre, descripcion, precio, stock, enPromocion, urlImagen })
 }
 
-export const saveUsuario = (nombre, clave, mail) => {
-  addDoc(collection(db, "usuario"), { nombre, clave, mail});
-}
-
 export const getProductos = () => getDocs(collection(db, "productos"));
 
 export const onGetProductos = (callback) => onSnapshot(collection(db, "productos"), callback);
@@ -47,3 +43,20 @@ export const deleteProducto = (id) => deleteDoc(doc(db, "productos", id));
 export const getProducto = (id) => getDoc(doc(db, "productos", id));
 
 export const updateProducto = (id, newFields) => updateDoc(doc(db, "productos", id), newFields);
+
+// ////////
+// USUARIOS
+// ////////
+export const saveUsuario = (nombre, clave, mail) => {
+  addDoc(collection(db, "usuario"), { nombre, clave, mail});
+}
+
+export const getUsuarios = () => getDocs(collection(db, "usuario"));
+
+export const onGetUsuarios = (callback) => onSnapshot(collection(db, "usuario"), callback);
+
+export const deleteUsuario = (id) => deleteDoc(doc(db, "usuario", id));
+
+export const getUsuario = (id) => getDoc(doc(db, "usuario", id));
+
+export const updateUsuario = (id, newFields) => updateDoc(doc(db, "usuario", id), newFields);
