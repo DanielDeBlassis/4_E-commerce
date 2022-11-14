@@ -1,0 +1,116 @@
+/* ESTILOS DE SUGERENCIAS */
+.container__busqueda_sugerencia {
+    position: relative;
+}
+
+.sugerencias__container {
+    position: absolute;
+    background: #ccc;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sugerencias {
+    list-style: none;
+    margin: 0;
+    padding: 10px 10px 0px 10px;
+    position: absolute;
+    background: #ccc;
+    width: 370px;
+    max-height: 360px;
+    overflow: auto;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 100;
+}
+
+.img-search {
+    width: 50px;
+    height: 50px;
+}
+
+ul.sugerencias>li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid thin darkgray;
+    margin: 0;
+    padding: 5px 0;
+}
+
+ul.sugerencias>li>a {
+    font-family: 'Raleway';
+    color: #464646;
+}
+
+ul.sugerencias>li>a:hover {
+    font-family: 'Raleway';
+    color: #363434;
+    font-weight: 600;
+}
+
+.resaltar {
+    background-color: #ffc600;
+}
+
+/* SCROLLBAR */
+/* width */
+.sugerencias::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+.sugerencias::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Handle */
+.sugerencias::-webkit-scrollbar-thumb {
+    background: #888;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Handle on hover */
+.sugerencias::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* AJUSTE A PANTALLAS */
+/* ---------------------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+    .sugerencias {
+        width: 190px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .container__busqueda_sugerencia {
+        width: 100%;
+    }
+    .container__busqueda_sugerencia>label {
+        display: flex;
+    }
+    
+    .sugerencias {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .sugerencias {
+        width: 250px;
+    }
+}
+
