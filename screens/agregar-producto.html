@@ -30,26 +30,26 @@
         <div class="encabezado__container">
             <div class="container__imagen">
                 <a href="../index.html"><img class="logo-alura" src="../assets/images/logo.svg"
-                        alt="Logo Alura Geek"></a>
+                    alt="Logo Alura Geek"></a>
             </div>
+            <i onclick="mostrarBuscador()" class="fas fa-search btn-lupa-search"></i>
             <div class="container__buscador">
-                <form class="formulario-busqueda">
-                    <label>
-                        <input class="form-control busqueda" type="search" placeholder="¿Qué deseas buscar?">
-                    </label>
-                    <div><button class="btn btn-light btn-buscar" type="submit" title="Buscar"><i
-                                class="fas fa-search"></i></button></div>
-                </form>
-                <div class="buscador__alternativo oculto">
-                    <i onclick="mostrarBuscador()" class="fas fa-search"></i>
-                    <div class="container__form">
-                        <form class="formulario-busqueda">
+                <div class="container-formulario-busqueda">
+                    <form class="formulario-busqueda">
+                        <div class="container__busqueda_sugerencia">
                             <label>
-                                <input class="form-control busqueda" type="search" placeholder="Buscar">
+                                <input class="form-control busqueda" type="search" placeholder="¿Qué deseas buscar?">
                             </label>
-                            <div><button class="btn btn-light btn-buscar" type="submit" title="Buscar"><i
-                                        class="fas fa-search"></i></button></div>
-                        </form>
+                        </div>
+                        <div><button class="btn btn-light btn-buscar" type="submit" title="Buscar" disabled><i
+                                    class="fas fa-search"></i></button></div>
+                    </form>
+                    <div class="sugerencias__container">
+                        <div>
+                            <ul class="sugerencias">
+                                <li class="sugerencias__item">Escriba algo...</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
