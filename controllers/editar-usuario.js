@@ -20,5 +20,16 @@ window.addEventListener("DOMContentLoaded", async () => {
     $claveRepetida.value = usuario.clave;
 
 
+    const $mostrarClave = document.querySelector("input[name='mostrar']");
+
+    $mostrarClave.addEventListener("click", () => {
+        if ($mostrarClave.checked) {
+            $clave.setAttribute("type", "text");
+            $claveRepetida.setAttribute("type", "text");
+        }else {
+            $clave.setAttribute("type", "password");
+            $claveRepetida.setAttribute("type", "password");
+        }
+    });
 });
 
