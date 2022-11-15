@@ -1,13 +1,13 @@
-function adaptar() {
-    const $buscador = document.querySelector(".container__buscador");
+// function adaptar() {
+//     const $buscador = document.querySelector(".container__buscador");
 
-    if (screen.width <= 500) {
-        $buscador.style.display = "none";
-    } else if (screen.width > 500 ) {
-        $buscador.style.display = "flex";
-    }
-    adaptarBoton();
-}
+//     // if (screen.width <= 500) {
+//     //     $buscador.style.display = "none";
+//     // } else if (screen.width > 500 ) {
+//     //     $buscador.style.display = "flex";
+//     // }
+//     adaptarBoton();
+// }
 
 
 let opcion = 0;
@@ -39,6 +39,6 @@ function adaptarBoton() {
     }
 }
 
-window.addEventListener("resize", adaptar);
+window.addEventListener("resize", adaptarBoton);
 // window.addEventListener("DOMContentLoaded", adaptar);
 
