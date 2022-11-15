@@ -41,5 +41,5 @@ function adaptarBoton() {
 }
 
 window.addEventListener("resize", adaptar);
-window.addEventListener("DOMContentLoaded", adaptar);
+// window.addEventListener("DOMContentLoaded", adaptar);
 
