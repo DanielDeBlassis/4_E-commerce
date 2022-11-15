@@ -61,6 +61,39 @@
     </header>
 
 
+    <main>
+
+        <section class="usuario">
+
+            <h1 class="usuarios__title">Crear Nuevo Usuario</h1>
+
+            <div class="usuario__datos__container">
+                <form class="formulario">
+                    <label for="nombreUsuario" title="Nombre de Usuario">Nombre de Usuario
+                        <input class="form-control" type="text" name="nombreUsuario" placeholder="Nombre de Usuario">
+                    </label>
+                    <label for="email" title="Correo Electrónico">Correo Electrónico
+                        <input class="form-control" type="email" name="email" placeholder="E-mail" required></label>
+                    <label for="password" title="Contraseña">Contraseña
+                        <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
+                    </label>
+                    <label for="password-repeat" title="Repetir Contraseña">Repetir Contraseña
+                        <input class="form-control" type="password" name="password-repeat" placeholder="Repetir Contraseña"
+                            required>
+                    </label>
+                    <label for="mostrar">
+                        <input type="checkbox" name="mostrar" value="mostrar">Mostrar Contraseña
+                    </label>
+                    <button class="btn btn-primary btn-editar" type="submit" title="Crear Usuario">Crear Usuario</button>
+                    <button class="btn btn-secondary btn-cancelar" onclick="window.location.href = '/screens/gestion-usuarios.html'"  type="button" title="Terminar Creación de Usuarios">Terminar</button>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+
     <footer>
         <section class="contacto">
             <div class="contacto__container">
