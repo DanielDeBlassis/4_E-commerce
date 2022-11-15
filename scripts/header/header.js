@@ -1,11 +1,11 @@
 function adaptar() {
     const $buscador = document.querySelector(".container__buscador");
 
-    // if (screen.width <= 500) {
-    //     $buscador.style.display = "none";
-    // } else if (screen.width > 500 ) {
-    //     $buscador.style.display = "flex";
-    // }
+    if (screen.width <= 500) {
+        $buscador.style.display = "none";
+    } else if (screen.width > 500 ) {
+        $buscador.style.display = "flex";
+    }
     adaptarBoton();
 }
 
