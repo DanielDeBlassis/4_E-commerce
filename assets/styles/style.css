@@ -22,7 +22,7 @@ noscript {
     padding: 40px;
 }
 
-noscript>i{
+noscript>i {
     color: red;
     font-size: 90px;
     padding: 50px 0;
@@ -34,10 +34,33 @@ noscript>p {
     font-weight: 700;
 }
 
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
 /* --------------------------------------------------------------------------------- */
 /*                                 AJUSTE A PANTALLA                                 */
 /* --------------------------------------------------------------------------------- */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     noscript>p {
         font-size: 25px;
     }
@@ -47,7 +70,8 @@ noscript>p {
     noscript>p {
         font-size: 16px;
     }
-    noscript>i{
+
+    noscript>i {
         font-size: 70px;
     }
 }
