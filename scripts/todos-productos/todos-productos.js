@@ -48,6 +48,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                     .then((willDelete) => {
                         if (willDelete) {
                             try {
+                                $contenedor.innerHTML = ``;
                                 deleteProducto(event.target.dataset.id);
                                 swal("El producto ha sido borrado con éxito!", {
                                     icon: "success",
