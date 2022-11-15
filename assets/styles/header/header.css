@@ -30,7 +30,7 @@
 .container__buscador {
     display: flex;
     align-items: center;
-    /* gap: 32px; */
+    z-index: 101;
 }
 
 .btn-lupa-search {
