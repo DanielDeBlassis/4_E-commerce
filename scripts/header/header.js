@@ -15,15 +15,14 @@ let opcion = 0;
 function mostrarBuscador() {
 
     const $buscador = document.querySelector(".container__buscador");
-    $buscador.style.display = "flex";
-    // if (opcion === 0) {
-    //     $buscador.style.display = "flex";
-    //     opcion = 1;
-    // } else if (opcion === 1) {
-    //     $buscador.style.display = "none";
-    //     opcion = 0;
-    // }
-    // console.log(`Opción en estado: -> ${opcion}`);
+
+    if (opcion === 0) {
+        $buscador.style.display = "flex";
+        opcion = 1;
+    } else if (opcion === 1) {
+        $buscador.style.display = "none";
+        opcion = 0;
+    }
 }
 
 function adaptarBoton() {
