@@ -18,5 +18,40 @@ window.addEventListener("DOMContentLoaded", async () => {
             </td>`;
             $cuerpoTabla.appendChild(fila);
         });
+
+        const $botonesBorrar = document.querySelectorAll(".btn-borrar");
+
+        $botonesBorrar.forEach(boton => {
+            boton.addEventListener("click", async (event) => {
+
+                swal({
+                    title: "¿Estás seguro de borrar este usuario?",
+                    text: "(Una vez borrado, el usuario no podrá ser recuperado)",
+                    icon: "warning",
+                    buttons: ["Cancelar", "Aceptar"],
+                    dangerMode: true,
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            try {
+                                $cuerpoTabla.innerHTML = ``;
+                                deleteUsuario(event.target.dataset.id);
+                                swal("El usuario ha sido borrado con éxito!", {
+                                    icon: "success",
+                                });
+                            } catch (error) {
+                                swal("Error!", "Ocurrió un error! Vuelve a intentar.", {
+                                    icon: "error",
+                                });
+                                console.log("Error al borrar un usuario: " + error);
+                            }
+
+                        } else {
+                            swal("El usuario está a salvo");
+                        }
+                    });
+            });
+        });
+    })
 });
 
