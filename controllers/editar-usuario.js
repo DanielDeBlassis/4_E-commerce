@@ -33,3 +33,23 @@ window.addEventListener("DOMContentLoaded", async () => {
     });
 });
 
+const $formularioEditar = document.querySelector(".formulario");
+
+$formularioEditar.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    $nombre = document.querySelector("input[name='nombreUsuario']").value;
+    $mail = document.querySelector("input[name='email']").value;
+    $clave = document.querySelector("input[name='password']").value;
+    $claveRepetida = document.querySelector("input[name='password-repeat']").value;
+
+    try {
+        updateUsuario(id, {nombre: $nombre, clave: $clave, mail: $mail});
+        swal("Correcto!", "Usuario editado exitosamente", "success");
+
+    } catch (error) {
+        swal("Error!", "Ocurrió un error, vuelve a intentarlo", "error");
+        console.log("Error al editar el usuario: " + error);
+    }
+
+});
