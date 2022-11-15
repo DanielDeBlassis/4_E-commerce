@@ -56,7 +56,6 @@ function mostrarCoincidencias() {
 }
 
 document.addEventListener("click", function(e) {
-    let $contenedorBuscador = document.querySelector(".container__buscador");
     const clases = e.target.classList;
     const nombreClases = `${clases.toString()}`;
 
