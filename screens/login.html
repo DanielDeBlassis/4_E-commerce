@@ -81,18 +81,19 @@
             <div class="contacto__container">
                 <div class="contacto__logo___links">
                     <img class="logo__alura-geek" src="../assets/images/logo.svg" alt="Logo Alura Geek">
+
+                    <div class="contacto__links">
+                        <ul class="contacto__links__lista">
+                            <li class="contacto__links__lista--item"><a href="#">Quiénes Somos</a></li>
+                            <li class="contacto__links__lista--item"><a href="#">Política de Privacidad</a></li>
+                            <li class="contacto__links__lista--item"><a href="#">Programa de Fidelidad</a></li>
+                            <li class="contacto__links__lista--item"><a href="#">Nuestras Tiendas</a></li>
+                            <li class="contacto__links__lista--item"><a href="#">Quiero ser franquiciado</a></li>
+                            <li class="contacto__links__lista--item"><a href="#">Anuncie aquí</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="contacto__links">
-                    <ul class="contacto__links__lista">
-                        <li class="contacto__links__lista--item"><a href="#">Quiénes Somos</a></li>
-                        <li class="contacto__links__lista--item"><a href="#">Política de Privacidad</a></li>
-                        <li class="contacto__links__lista--item"><a href="#">Programa de Fidelidad</a></li>
-                        <li class="contacto__links__lista--item"><a href="#">Nuestras Tiendas</a></li>
-                        <li class="contacto__links__lista--item"><a href="#">Quiero ser franquiciado</a></li>
-                        <li class="contacto__links__lista--item"><a href="#">Anuncie aquí</a></li>
-                    </ul>
-                </div>
-                <form class="contacto__mensaje">
+                <form id="form" class="contacto__mensaje">
                     <h5 class="contacto__mensaje__title">Hable con nosotros</h5>
                     <label for="nombre" title="Nombre">
                         <input class="form-control nombre" type="text" name="nombre" placeholder="Nombre" />
@@ -101,7 +102,7 @@
                         <textarea class="form-control mensaje" cols="50" rows="4" name="mensaje"
                             placeholder="Mensaje"></textarea>
                     </label>
-                    <div class="contenedor-btn-enviar"><button class="btn btn-primary" type="submit"
+                    <div class="contenedor-btn-enviar"><button id="button" class="btn btn-primary" type="submit"
                             title="Enviar">Enviar</button></div>
                 </form>
             </div>
