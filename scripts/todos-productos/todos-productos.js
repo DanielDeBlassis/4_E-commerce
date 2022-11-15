@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         $botonesEditar.forEach(boton => {
             boton.addEventListener("click", async (event) => {
-                window.location.href = `/screens/editar-producto.html?id=${event.target.dataset.id}`;
+                window.location.href = `../screens/editar-producto.html?id=${event.target.dataset.id}`;
             });
         });
 
