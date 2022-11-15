@@ -1,0 +1,59 @@
+main {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.usuario {
+    width: 30%;
+    text-align: center;
+    margin: 100px 0;
+}
+
+h1 {
+    margin-bottom: 15%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/*                      AJUSTE A PANTALLA - MEDIA QUERYS                           */
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1024px) {
+    section.usuario {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    section.usuario {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    section.usuario {
+        width: 70%;
+    }
+}
