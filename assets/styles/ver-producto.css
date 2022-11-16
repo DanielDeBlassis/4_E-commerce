@@ -119,7 +119,7 @@ sup.descuento {
     }
     .producto__seleccionado__imagen {
         width: 100%;
-        height: 192px;
+        height: auto;
     }
 }
 
