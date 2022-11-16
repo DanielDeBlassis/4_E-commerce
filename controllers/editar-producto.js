@@ -24,8 +24,10 @@ const $contenedorImagen = document.querySelector(".contenedor-imagen");
 
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
+let $nombreImagenAnterior = "";
 
 let $urlImagen = document.querySelector("input[name='url-img']");
+let $nombreImagen = document.querySelector("input[name='nombre-img']");
 let $categoria = document.querySelector("input[name='categoria']");
 let $nombre = document.querySelector("input[name='nombre-producto']");
 let $precio = document.querySelector("input[name='precio']");
@@ -39,7 +41,10 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const producto = doc.data();
 
+    $nombreImagenAnterior = producto.nombreImg;
+
     $urlImagen.value = producto.urlImagen;
+    $nombreImagen.value = producto.nombreImg;
     $categoria.value = producto.categoria;
     $nombre.value = producto.nombre;
     $precio.value = producto.precio;
