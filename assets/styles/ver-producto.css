@@ -111,6 +111,7 @@ sup.descuento {
     }
     .producto__seleccionado__container {
         flex-direction: column;
+        gap: 77px;
     }
     .producto__seleccionado__descripcion {
         width: auto;
