@@ -1,4 +1,23 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getProducto, updateProducto } from "../services/client-service.js"
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
+import { borrarImagen } from "../services/storage-service.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+apiKey: "AIzaSyBfNGwN-6zRWfX6Co-_a51QunkYibG-_KE",
+authDomain: "ecommerce-alurageek.firebaseapp.com",
+databaseURL: "https://ecommerce-alurageek-default-rtdb.firebaseio.com",
+projectId: "ecommerce-alurageek",
+storageBucket: "ecommerce-alurageek.appspot.com",
+messagingSenderId: "145141151933",
+appId: "1:145141151933:web:08d55db722e5ddaaea9fd4"
+};
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const storage = getStorage();
+
+// -----------------------------------------------------------------------------------
 
 const $formularioEditar = document.querySelector(".formulario");
 const $contenedorImagen = document.querySelector(".contenedor-imagen");
