@@ -71,6 +71,17 @@
                         <div class="text-center contenedor-imagen"></div>
                     </div>
                     <div class="campo">
+                        <span>Seleccione la imagen</span>
+                        <label for="imagenProducto">
+                            <input type="file" name="imagenProducto" accept=".jpeg,.jpg,.png,.svg"
+                                placeholder="Seleccione una imagen">
+                            <div class="carga__dialog oculto">
+                                <div class="carga__dialog__mensaje">Cargando...<span class="spinner-border"></span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="campo">
                         <span>URL de la imagen</span>
                         <label for="url-img"><input class="" type="url" name="url-img" placeholder="URL"
                                 title="URL de la imagen" required="">
