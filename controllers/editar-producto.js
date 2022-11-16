@@ -35,8 +35,7 @@ let $stock = document.querySelector("input[name='stock']");
 let $enPromocion = document.querySelector("select[name='promocion']");
 let $descripcion = document.querySelector("textarea[name='descripcion']");
 
-window.addEventListener("DOMContentLoaded", async () => {
-
+async function cargarDatos() {
     const doc = await getProducto(id);
 
     const producto = doc.data();
@@ -53,8 +52,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     $descripcion.value = producto.descripcion;
 
     $contenedorImagen.innerHTML = `<img src="${producto.urlImagen}" alt="${producto.nombre}">`;
-
-})
 
 $formularioEditar.addEventListener("submit", (e) => {
     e.preventDefault();
