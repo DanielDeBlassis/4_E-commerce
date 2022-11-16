@@ -100,13 +100,13 @@
                     <div class="campo">
                         <span>Precio del Producto</span>
                         <label for="precio" title="Precio del Producto">
-                            <input class="" type="text" name="precio" placeholder="600.50">
+                            <input class="" type="number" name="precio" placeholder="600.50" required>
                         </label>
                     </div>
                     <div class="campo">
                         <span>Stock del Producto</span>
                         <label for="stock" title="Stock del Producto">
-                            <input class="" type="text" name="stock" placeholder="100">
+                            <input class="" type="number" name="stock" placeholder="100" required>
                         </label>
                     </div>
                     <div class="campo">
@@ -121,14 +121,16 @@
                     <div class="campo">
                         <span>Descripción del Producto</span>
                         <label for="descripcion" title="Descripción del Producto">
-                            <textarea class="" name="descripcion" id="" cols="30" rows="10"
-                                placeholder="Descripción"></textarea>
+                            <textarea class="" name="descripcion" id="" cols="30" rows="10" placeholder="Descripción"
+                                minlength="1" maxlength="500" required></textarea>
                         </label>
                     </div>
                     <button class="btn btn-primary btn-agregar" type="submit" title="Ingresar">Agregar Producto</button>
                 </form>
             </div>
         </section>
+
+
     </main>
 
     <footer>
