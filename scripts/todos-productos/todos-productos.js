@@ -50,6 +50,8 @@ window.addEventListener("DOMContentLoaded", async () => {
                             try {
                                 $contenedor.innerHTML = ``;
                                 deleteProducto(event.target.dataset.id);
+                                //Borrado de la imagen en Firebase Storage
+                                borrarImagen(event.target.dataset.nombreimg);
                                 swal("El producto ha sido borrado con éxito!", {
                                     icon: "success",
                                 });
