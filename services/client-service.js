@@ -30,8 +30,8 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
 
-export const saveProducto = (categoria, nombre, descripcion, precio, stock, enPromocion, urlImagen) => {
-  addDoc(collection(db, "productos"), { categoria, nombre, descripcion, precio, stock, enPromocion, urlImagen })
+export const saveProducto = (categoria, nombre, descripcion, precio, stock, enPromocion, urlImagen, nombreImg) => {
+  addDoc(collection(db, "productos"), { categoria, nombre, descripcion, precio, stock, enPromocion, urlImagen, nombreImg })
 }
 
 export const getProductos = () => getDocs(collection(db, "productos"));
