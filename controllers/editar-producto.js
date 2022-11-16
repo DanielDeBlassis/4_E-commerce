@@ -22,6 +22,9 @@ const storage = getStorage();
 const $formularioEditar = document.querySelector(".formulario");
 const $contenedorImagen = document.querySelector(".contenedor-imagen");
 
+const $imagenProducto = document.querySelector('input[name="imagenProducto"]');
+let enlace = "";
+
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
 let $nombreImagenAnterior = "";
@@ -96,6 +99,7 @@ $formularioEditar.addEventListener("submit", (e) => {
     e.preventDefault();
 
     $urlImagen = document.querySelector("input[name='url-img']").value;
+    $nombreImagen = document.querySelector("input[name='nombre-img']").value;
     $categoria = document.querySelector("input[name='categoria']").value;
     $nombre = document.querySelector("input[name='nombre-producto']").value;
     $precio = document.querySelector("input[name='precio']").value;
@@ -104,8 +108,11 @@ $formularioEditar.addEventListener("submit", (e) => {
     $descripcion = document.querySelector("textarea[name='descripcion']").value;
 
     try {
-        updateProducto(id, { categoria: $categoria, nombre: $nombre, descripcion: $descripcion, precio: parseFloat($precio), stock: parseInt($stock), enPromocion: Boolean(parseInt($enPromocion)), urlImagen: $urlImagen });
-        swal("Correcto!", "Producto editado exitosamente", "success");
+        updateProducto(id, { categoria: $categoria, nombre: $nombre, descripcion: $descripcion, precio: parseFloat($precio), stock: parseInt($stock), enPromocion: Boolean(parseInt($enPromocion)), urlImagen: $urlImagen, nombreImg: $nombreImagen });
+        borrarImagen($nombreImagenAnterior);
+        swal("Correcto!", "Producto editado exitosamente", "success").then((res)=>{
+            window.location.reload();
+        })
 
     } catch (error) {
         swal("Error!", "Ocurrió un error, vuelve a intentarlo", "error");
