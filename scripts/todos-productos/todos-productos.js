@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                                 <img class="imagen__producto" src="${producto.urlImagen}" alt="${producto.nombre}" />
                                 <div class="container__btn-edit">
                                     <i class="fas fa-pen btn-editar" data-id="${doc.id}"></i>
-                                    <i class="fas fa-trash btn-borrar" data-id="${doc.id}"></i>
+                                    <i class="fas fa-trash btn-borrar" data-id="${doc.id}" data-nombreimg="${producto.nombreImg}"></i>
                                 </div>
                             </div>
                             <div class="descripcion__producto">
