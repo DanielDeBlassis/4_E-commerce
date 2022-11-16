@@ -6,6 +6,7 @@ formularioAgregar.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const $urlImagen = document.querySelector("input[name='url-img']").value;
+    const $nombreImagen = document.querySelector("input[name='nombre-img']").value;//nombre de imagen en Firebase
     const $categoria = document.querySelector("input[name='categoria']").value;
     const $nombre = document.querySelector("input[name='nombre-producto']").value;
     const $precio = document.querySelector("input[name='precio']").value;
@@ -14,7 +15,7 @@ formularioAgregar.addEventListener("submit", (e) => {
     const $descripcion = document.querySelector("textarea[name='descripcion']").value;
 
     try {
-        saveProducto($categoria, $nombre, $descripcion, parseFloat($precio), parseInt($stock), Boolean(parseInt($enPromocion)), $urlImagen);
+        saveProducto($categoria, $nombre, $descripcion, parseFloat($precio), parseInt($stock), Boolean(parseInt($enPromocion)), $urlImagen, $nombreImagen);
         swal("Correcto!", "Producto agregado exitosamente", "success");
         formularioAgregar.reset();
     }catch(error){
