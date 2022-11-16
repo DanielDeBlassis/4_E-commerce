@@ -52,6 +52,10 @@ async function cargarDatos() {
     $descripcion.value = producto.descripcion;
 
     $contenedorImagen.innerHTML = `<img src="${producto.urlImagen}" alt="${producto.nombre}">`;
+}
+
+window.addEventListener("DOMContentLoaded", cargarDatos);
+
 
 $formularioEditar.addEventListener("submit", (e) => {
     e.preventDefault();
