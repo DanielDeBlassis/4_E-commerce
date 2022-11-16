@@ -20,3 +20,10 @@ const app = initializeApp(firebaseConfig);
 
 const storage = getStorage();
 
+export const borrarImagen = (nombreImg) => {
+  const imagenABorrar = ref(storage, `images/productos/${nombreImg}`);
+  deleteObject(imagenABorrar).then(() => {
+  console.log("Imagen borrada exitosamente!");
+}).catch((error) => {
+  console.log("Ocurrió un error al borrar la imagen: " + error);
+})}
