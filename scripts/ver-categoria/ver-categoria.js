@@ -1,4 +1,4 @@
-import { onGetProductos } from "../../services/client-service.js";
+import { onGetProductos } from "../../services/firestore-service.js";
 
 const $contenedor = document.querySelector(".categoria_producto__box");
 

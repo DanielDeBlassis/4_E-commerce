@@ -1,4 +1,4 @@
-import { getProducto, getProductos } from "../../services/client-service.js"
+import { getProducto, getProductos } from "../../services/firestore-service.js"
 
 const url = new URL(window.location);
 const id = url.searchParams.get("id");

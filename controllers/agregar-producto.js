@@ -1,4 +1,4 @@
-import { saveProducto } from "../services/client-service.js";
+import { saveProducto } from "../services/firestore-service.js";
 
 const formularioAgregar = document.querySelector(".formulario");
 

@@ -1,4 +1,4 @@
-import { deleteProducto, onGetProductos } from "../../services/client-service.js";
+import { deleteProducto, onGetProductos } from "../../services/firestore-service.js";
 import { borrarImagen } from "../../services/storage-service.js";
 
 const $contenedor = document.querySelector(".categoria_producto__box");
