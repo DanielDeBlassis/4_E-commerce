@@ -56,6 +56,11 @@ noscript>p {
     background: #555;
 }
 
+/* LOG OUT ICON */
+.icono-salir {
+    font-size: 4rem;
+    color: red;
+}
 
 /* --------------------------------------------------------------------------------- */
 /*                                 AJUSTE A PANTALLA                                 */
