@@ -1,4 +1,4 @@
-import { getUsuario, updateUsuario } from "../services/client-service.js";
+import { getUsuario, updateUsuario } from "../services/firestore-service.js";
 
 const url = new URL(window.location);
 let id = url.searchParams.get("id");

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-import { getProducto, updateProducto } from "../services/client-service.js"
+import { getProducto, updateProducto } from "../services/firestore-service.js"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 import { borrarImagen } from "../services/storage-service.js";
 
