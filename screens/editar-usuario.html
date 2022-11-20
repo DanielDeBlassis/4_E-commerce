@@ -31,7 +31,7 @@
         <div class="encabezado__container">
             <div class="container__imagen">
                 <a href="../index.html"><img class="logo-alura" src="../assets/images/logo.svg"
-                    alt="Logo Alura Geek"></a>
+                        alt="Logo Alura Geek"></a>
             </div>
             <i onclick="mostrarBuscador()" class="fas fa-search btn-lupa-search"></i>
             <div class="container__buscador">
@@ -61,7 +61,7 @@
     </header>
 
 
-    <main>
+    <!-- <main>
 
         <section class="usuario">
 
@@ -74,24 +74,31 @@
                     </label>
                     <label for="email" title="Correo Electrónico">Correo Electrónico
                         <input class="form-control" type="email" name="email" placeholder="E-mail" required></label>
-                    <label for="password" title="Contraseña">Contraseña
-                        <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
-                    </label>
-                    <label for="password-repeat" title="Repetir Contraseña">Repetir Contraseña
-                        <input class="form-control" type="password" name="password-repeat" placeholder="Repetir Contraseña"
-                            required>
-                    </label>
-                    <label for="mostrar">
-                        <input type="checkbox" name="mostrar" value="mostrar">Mostrar Contraseña
-                    </label>
+                    <div>
+                        <h6>Las contraseñas no se almacenan</h6>
+                        <p><b>Nota:</b> <em>Deberá volver a crear una contraseña para completar la edición</em></p>
+                        <label for="password" title="Contraseña">Contraseña
+                            <input class="form-control" type="password" name="password" placeholder="Contraseña"
+                                required>
+                        </label>
+                        <label for="password-repeat" title="Repetir Contraseña">Repetir Contraseña
+                            <input class="form-control" type="password" name="password-repeat"
+                                placeholder="Repetir Contraseña" required>
+                        </label>
+                        <label for="mostrar">
+                            <input type="checkbox" name="mostrar" value="mostrar">Mostrar Contraseña
+                        </label>
+                    </div>
                     <button class="btn btn-primary btn-editar" type="submit" title="Editar Usuario">Editar</button>
-                    <button class="btn btn-secondary btn-cancelar" onclick="window.location.href = '../screens/gestion-usuarios.html'"  type="button" title="Terminar Edición">Terminar</button>
+                    <button class="btn btn-secondary btn-cancelar"
+                        onclick="window.location.href = '../screens/gestion-usuarios.html'" type="button"
+                        title="Terminar Edición">Terminar</button>
                 </form>
             </div>
 
         </section>
 
-    </main>
+    </main> -->
 
 
     <footer>
