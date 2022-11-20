@@ -5,3 +5,7 @@ label {
     font-family: 'Raleway';
     font-weight: 500;
 }
+
+.error-message {
+    color: red;
+}

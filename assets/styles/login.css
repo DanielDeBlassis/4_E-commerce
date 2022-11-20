@@ -30,6 +30,17 @@ form.formulario {
     gap: 30px;
 }
 
+/* ERROR MESSAGE */
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    font-family: 'Raleway';
+    font-weight: 500;
+}
+.error-message {
+    color: red;
+}
 
 /* ------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------- */
