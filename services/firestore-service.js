@@ -51,6 +51,10 @@ export const updateProducto = (id, newFields) => updateDoc(doc(db, "productos", 
 // export const saveUsuario = (nombre, clave, mail) => {
 //   addDoc(collection(db, "usuario"), { nombre, clave, mail});
 // }
+export const saveUsuario = (id, nombre, mail, rol) => {
+  setDoc(doc(db, "usuario", id), {nombre, mail, rol});
+}
+
 export const getUsuarios = () => getDocs(collection(db, "usuario"));
 
 export const onGetUsuarios = (callback) => onSnapshot(collection(db, "usuario"), callback);
