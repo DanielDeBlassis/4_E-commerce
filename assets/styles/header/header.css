@@ -123,6 +123,18 @@ form.formulario-busqueda {
     display: flex;
 }
 
+/* LOG OPTIONS */
+.log__options {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.logg-in {
+    /* display: none; */
+}
+
 /* ------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------- */
 /*                      AJUSTE A PANTALLA - MEDIA QUERYS                           */
