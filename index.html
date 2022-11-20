@@ -54,7 +54,11 @@
                 </div>
             </div>
             <div>
-                <a class="btn btn-outline-primary btn-login" href="screens/login.html">Login</a>
+                <ul class="log__options">
+                    <li><a class="btn btn-outline-primary btn-login logg-out" href="screens/login.html">Login</a></li>
+                    <!-- <li><a class="btn btn-outline-primary btn-login logg-out" href="screens/registro.html">Sign Up</a></li> -->
+                    <li><a class="btn btn-outline-primary btn-login logg-in oculto" id="logout" href="#">Logout</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -140,6 +144,7 @@
     <script src="./scripts/footer/contacto.js"></script>
     <script type="module" src="scripts/header/buscador.js"></script>
     <script type="module" src="scripts/app.js"></script>
+    <script type="module" src="scripts/index.js"></script>
 </body>
 
 </html>
