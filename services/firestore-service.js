@@ -9,7 +9,8 @@ import {
   onSnapshot,
   doc,
   getDoc,
-  updateDoc
+  updateDoc,
+  setDoc
 } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -47,10 +48,9 @@ export const updateProducto = (id, newFields) => updateDoc(doc(db, "productos", 
 // ////////
 // USUARIOS
 // ////////
-export const saveUsuario = (nombre, clave, mail) => {
-  addDoc(collection(db, "usuario"), { nombre, clave, mail});
-}
-
+// export const saveUsuario = (nombre, clave, mail) => {
+//   addDoc(collection(db, "usuario"), { nombre, clave, mail});
+// }
 export const getUsuarios = () => getDocs(collection(db, "usuario"));
 
 export const onGetUsuarios = (callback) => onSnapshot(collection(db, "usuario"), callback);
